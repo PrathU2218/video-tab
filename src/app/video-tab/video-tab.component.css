@@ -2,54 +2,92 @@
     font-family: monospace;
     display: flex;
 }
+
 .left{
-    flex: 70%;
-    padding: 0 15px;
+    flex: 68%;
+    padding: 8px 15px;
+    border-right: 1px solid rgb(0,0,0,0.2);
+    background: rgb(245, 245, 245);
 }
+
 .title{
     flex: 80%;
-    border-style: groove;
-    padding: 0 10px;
+    margin-left: 5px;
 }
+
+.title i {
+    font-size:24px;
+    cursor: pointer;
+    color: rgb(90, 90, 90);
+}
+
+.title i:hover {
+    color: rgb(58, 58, 58);
+    transition: 0.2s;
+}
+
+h1.title{
+    border-style: outset ; 
+}
+
+.video video {
+    box-shadow: 2px 4px 6px #6d6d6d;
+}
+
 .right{
-    flex: 30%;
+    flex: 32%;
     overflow-y: scroll;
-    border-style: groove;
-    padding: 0 15px;
+    padding: 4px 15px;
+    background: rgb(233, 233, 233);
 }
+
 .dropdown{
     display: none;
-    border-style: groove;
-    
 }
+
 .banner{
     display: flex;
     height: 20%;
-    border-style: groove;
+    padding: 10px 0;
 }
-.upvotes{
-    flex: 20%;
-    text-align: center;
-    border-style: groove;
-}
-.comments{
-    border-style: groove;
 
+.upvotes{
+    flex: 10%;
+    text-align: center;
+    padding-top: 20p;
 }
+
+.comments {
+    margin: 0 10px;
+}
+
 .upnext-videos{
     display: flex;
-    border-style: groove;
+    border-bottom:2px solid rgb(0,0,0,0.2); 
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 5px 15px;
 }
+
 .img{
-    flex: 10em;
-    width: 100%;
-    border-style: groove;
-    height: 75px;
+    width: 140px;
+    height: 95px;
 }
+
+.upnext-videos img{
+    border-bottom:5px solid rgb(78, 78, 78);
+}
+
 .upnext-title{
-    flex: 70%;
+    max-width: max-content;
     padding-left: 15px;
 }
+
+.reference{
+    border-style: outset ; 
+    cursor: pointer;
+}
+
 
 
 
@@ -63,12 +101,14 @@
         margin: 0 8px;
     }
     .upnext-title{
-        flex: 75%;
+        max-width: max-content;
+        padding-left: 15px;
     }
     .img{
-        flex: 11em;
-        width: 100%;
-        height: 90px;
-        
+        width: 150px;
+        height: 95px;
+    }
+    .comments {
+        padding: 10px 0;
     }
 }
