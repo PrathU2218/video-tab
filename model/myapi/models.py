@@ -1,5 +1,8 @@
 from django.db import models
-from django.contrib.auth.models import User    
+from django.contrib.auth.models import User   
+
+
+
 class UserProfile(models.Model):
     user=models.OneToOneField(User, on_delete=models.CASCADE)
     name=models.CharField(max_length=100)
@@ -9,6 +12,8 @@ class UserProfile(models.Model):
     views=models.IntegerField()
     experience=[]
     exams_completed=[]
+    
+
 
 class Playlists(models.Model):
     creator=models.ForeignKey(UserProfile, on_delete=models.CASCADE, related_name="created_playlists")
@@ -16,6 +21,10 @@ class Playlists(models.Model):
     name=models.CharField(max_length=100)
     size=models.IntegerField()
     Tags=models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+    
 
 class Comments(models.Model):
     Poster= models.ForeignKey(UserProfile, on_delete=models.CASCADE)
